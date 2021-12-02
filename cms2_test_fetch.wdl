@@ -1,7 +1,7 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-211013-1315-add-isafe--fed153c71c0197e17df2d24d07b0e86035937017/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-211013-1315-add-isafe--fed153c71c0197e17df2d24d07b0e86035937017/tasks.wdl"
 
 workflow cms2_test_fetch {
   input {
