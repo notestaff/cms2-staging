@@ -1,7 +1,7 @@
 version 1.0
 
-import "./run_sims.wdl"
-import "./tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-211013-1315-add-isafe--66158e22cd8aad55b45f3b4d8cde868e92cb90d1/run_sims.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-211013-1315-add-isafe--66158e22cd8aad55b45f3b4d8cde868e92cb90d1/tasks.wdl"
 
 # * workflow compute_normalization_stats_wf
 workflow compute_normalization_stats_wf {
