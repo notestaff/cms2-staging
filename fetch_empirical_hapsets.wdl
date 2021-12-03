@@ -1,8 +1,8 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
-import "./wdl_assert.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-211013-1315-add-isafe--06473f6b0060e2d87cb726d4715269c278ed8588/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-211013-1315-add-isafe--06473f6b0060e2d87cb726d4715269c278ed8588/tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-211013-1315-add-isafe--06473f6b0060e2d87cb726d4715269c278ed8588/wdl_assert.wdl"
 
 workflow fetch_empirical_hapsets_wf {
   meta {
