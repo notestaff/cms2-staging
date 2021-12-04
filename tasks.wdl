@@ -1,6 +1,6 @@
 version 1.0
 
-import "./structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-211013-1315-add-isafe--eddda119f941468fe42c95025c565cf9fc637d5e/structs.wdl"
 
 # * task compute_one_pop_cms2_components
 task compute_one_pop_cms2_components {
@@ -12,8 +12,8 @@ task compute_one_pop_cms2_components {
     Pop sel_pop
     ComponentComputationParams component_computation_params
   }
-  File script = "./compute_cms2_components.py"
-  File misc_utils = "./misc_utils.py"
+  File script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-211013-1315-add-isafe/eddda119f941468fe42c95025c565cf9fc637d5e/compute_cms2_components.py"
+  File misc_utils = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-211013-1315-add-isafe/eddda119f941468fe42c95025c565cf9fc637d5e/misc_utils.py"
 
   command <<<
     set -ex -o pipefail
@@ -67,8 +67,8 @@ task compute_two_pop_cms2_components {
     Pop alt_pop
   }
 
-  File script = "./compute_cms2_components.py"
-  File misc_utils = "./misc_utils.py"
+  File script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-211013-1315-add-isafe/eddda119f941468fe42c95025c565cf9fc637d5e/compute_cms2_components.py"
+  File misc_utils = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-211013-1315-add-isafe/eddda119f941468fe42c95025c565cf9fc637d5e/misc_utils.py"
 
 # ** command
   command <<<
@@ -226,7 +226,7 @@ task normalize_and_collate_block {
   input {
     NormalizeAndCollateBlockInput inp
   }
-  File normalize_and_collate_script = "./norm_and_collate_block.py"
+  File normalize_and_collate_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-211013-1315-add-isafe/eddda119f941468fe42c95025c565cf9fc637d5e/norm_and_collate_block.py"
   command <<<
     set -ex -o pipefail
 
@@ -260,7 +260,7 @@ task collate_stats_and_metadata_for_sel_sims_block {
   input {
     collate_stats_and_metadata_for_all_sel_sims_input inp
   }
-  File collate_stats_and_metadata_for_sel_sims_block_script = "./collate_stats_and_metadata_for_sel_sims_block.py"
+  File collate_stats_and_metadata_for_sel_sims_block_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-211013-1315-add-isafe/eddda119f941468fe42c95025c565cf9fc637d5e/collate_stats_and_metadata_for_sel_sims_block.py"
   Int max_hapset_id_len = 256
   String hapsets_component_stats_h5_fname = inp.out_fnames_prefix + ".all_component_stats.h5"
   String hapsets_metadata_tsv_gz_fname = inp.out_fnames_prefix + ".hapsets_metadata.tsv.gz"
@@ -327,7 +327,7 @@ task construct_pops_info_for_1KG {
     File superpop_to_representative_pop_json = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/resources/superpop-to-representative-pop.json"
     File empirical_regions_bed
   }
-  File construct_pops_info_for_1KG_script = "./construct_pops_info_for_1KG.py"
+  File construct_pops_info_for_1KG_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-211013-1315-add-isafe/eddda119f941468fe42c95025c565cf9fc637d5e/construct_pops_info_for_1KG.py"
   String pops_info_fname = "pops_info.1KG.json"
   command <<<
     set -ex -o pipefail
@@ -373,7 +373,7 @@ task fetch_empirical_hapsets_from_1KG {
     File genetic_maps_tar_gz = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/genetic_maps/hg19_maps.tar.gz"
     File superpop_to_representative_pop_json = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/resources/superpop-to-representative-pop.json"
   }
-  File fetch_empirical_hapsets_script = "./fetch_empirical_hapsets.py"
+  File fetch_empirical_hapsets_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-211013-1315-add-isafe/eddda119f941468fe42c95025c565cf9fc637d5e/fetch_empirical_hapsets.py"
 
   command <<<
     set -ex -o pipefail
@@ -416,7 +416,7 @@ task call_neutral_region_explorer {
     NeutralRegionExplorerParams nre_params
     String out_fnames_prefix = "nre"
   }
-  File fetch_neutral_regions_nre_script = "./fetch_neutral_regions_nre.py"
+  File fetch_neutral_regions_nre_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-211013-1315-add-isafe/eddda119f941468fe42c95025c565cf9fc637d5e/fetch_neutral_regions_nre.py"
   String neutral_regions_tsv_fname = out_fnames_prefix + ".neutral_regions.tsv"
   String neutral_regions_bed_fname = out_fnames_prefix + ".neutral_regions.bed"
   String nre_submitted_form_html_fname = out_fnames_prefix + ".submitted_form.html"
