@@ -1,8 +1,8 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
-import "./wdl_assert.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-211214-replace-nre--a66e3e6ac292490d68365a1e429c5dae7843a679/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-211214-replace-nre--a66e3e6ac292490d68365a1e429c5dae7843a679/tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-211214-replace-nre--a66e3e6ac292490d68365a1e429c5dae7843a679/wdl_assert.wdl"
 
 workflow fetch_empirical_hapsets_wf {
   meta {
