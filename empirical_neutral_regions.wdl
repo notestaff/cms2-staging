@@ -1,7 +1,7 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-211222-test-isafe-with-orig-model--64fce97c64060290c1c1576a17cc54a09b582567/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-211222-test-isafe-with-orig-model--64fce97c64060290c1c1576a17cc54a09b582567/tasks.wdl"
 
 workflow construct_empirical_neutral_regions {
   input {
