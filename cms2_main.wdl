@@ -1,7 +1,7 @@
 version 1.0
 
-import "./structs.wdl"
-import "./run_sims_and_compute_cms2_components.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-master--f06ab6faaf4c92a42e93c0b453f0a4aaf73eebb7/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-master--f06ab6faaf4c92a42e93c0b453f0a4aaf73eebb7/run_sims_and_compute_cms2_components.wdl"
 
 # * workflow run_sims_and_compute_cms2_components
 workflow cms2_main {
