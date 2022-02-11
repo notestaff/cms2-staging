@@ -1,9 +1,9 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
-import "./fetch_empirical_hapsets.wdl"
-import "./compute_cms2_components.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-211222-test-isafe-with-orig-model--0d1fdbb069632b9e4a452b8fcf612a3c13e36887/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-211222-test-isafe-with-orig-model--0d1fdbb069632b9e4a452b8fcf612a3c13e36887/tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-211222-test-isafe-with-orig-model--0d1fdbb069632b9e4a452b8fcf612a3c13e36887/fetch_empirical_hapsets.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-211222-test-isafe-with-orig-model--0d1fdbb069632b9e4a452b8fcf612a3c13e36887/compute_cms2_components.wdl"
 
 workflow cms2_empirical {
   input {

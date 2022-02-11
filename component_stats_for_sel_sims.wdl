@@ -1,6 +1,6 @@
 version 1.0
 
-import "./tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-211222-test-isafe-with-orig-model--0d1fdbb069632b9e4a452b8fcf612a3c13e36887/tasks.wdl"
 
 workflow component_stats_for_sel_sims_wf {
   input {
