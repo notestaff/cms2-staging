@@ -3,8 +3,8 @@
     "cms2_main.nreps": 8192,
     "cms2_main.numRepsPerBlock": 16,
     "cms2_main.hapset_block_size": 16,
-    "cms2_main.paramFile_demographic_model": "./defdef15_hard_sel1_common.par",
-    "cms2_main.paramFile_neutral": "./test.neutral.cosiParams",
-    "cms2_main.paramFiles_selection": ["./sel1_origin1.par"],
-    "cms2_main.recombFile": "./test_recom.recom"
+    "cms2_main.paramFile_demographic_model": "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220211-1632-make-minimal-sim-train-data/b20e91cc8fa7f9b93181174a1cf90962deed327e/defdef15_hard_sel1_common.par",
+    "cms2_main.paramFile_neutral": "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220211-1632-make-minimal-sim-train-data/b20e91cc8fa7f9b93181174a1cf90962deed327e/test.neutral.cosiParams",
+    "cms2_main.paramFiles_selection": ["gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220211-1632-make-minimal-sim-train-data/b20e91cc8fa7f9b93181174a1cf90962deed327e/sel1_origin1.par"],
+    "cms2_main.recombFile": "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220211-1632-make-minimal-sim-train-data/b20e91cc8fa7f9b93181174a1cf90962deed327e/test_recom.recom"
 }
