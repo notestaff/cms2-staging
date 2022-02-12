@@ -1,7 +1,7 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220211-1632-make-minimal-sim-train-data--42fa5494f13265e01d92101c61be53c06db5b022/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220211-1632-make-minimal-sim-train-data--42fa5494f13265e01d92101c61be53c06db5b022/tasks.wdl"
 
 workflow cms2_test_fetch {
   input {
