@@ -1,6 +1,6 @@
 version 1.0
 
-import "./tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220211-1632-make-minimal-sim-train-data--cd5f238901034b379e68b4a3f3a189a5c7c4d6c5/tasks.wdl"
 
 workflow component_stats_for_sel_sims_wf {
   input {
