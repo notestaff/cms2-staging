@@ -1,9 +1,9 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
-import "./fetch_empirical_hapsets.wdl"
-import "./compute_cms2_components.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220211-1632-make-minimal-sim-train-data--d729892f31c169300fae795dd45401f7416ee777/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220211-1632-make-minimal-sim-train-data--d729892f31c169300fae795dd45401f7416ee777/tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220211-1632-make-minimal-sim-train-data--d729892f31c169300fae795dd45401f7416ee777/fetch_empirical_hapsets.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220211-1632-make-minimal-sim-train-data--d729892f31c169300fae795dd45401f7416ee777/compute_cms2_components.wdl"
 
 workflow cms2_empirical {
   input {
