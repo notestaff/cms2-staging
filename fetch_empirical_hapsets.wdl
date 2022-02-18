@@ -1,8 +1,8 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
-import "./wdl_assert.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220211-1632-make-minimal-sim-train-data--0a6842752d8177e2b85602997ec59e0b8dfe39d6/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220211-1632-make-minimal-sim-train-data--0a6842752d8177e2b85602997ec59e0b8dfe39d6/tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220211-1632-make-minimal-sim-train-data--0a6842752d8177e2b85602997ec59e0b8dfe39d6/wdl_assert.wdl"
 
 workflow fetch_empirical_hapsets_wf {
   meta {
