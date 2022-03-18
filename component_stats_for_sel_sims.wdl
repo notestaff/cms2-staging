@@ -1,6 +1,6 @@
 version 1.0
 
-import "./tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220311-1537-refactor-avoid-glob--d622c0a2309a6f8d2410b3c5ab7efeaad7fb7a4f/tasks.wdl"
 
 workflow component_stats_for_sel_sims_wf {
   input {
