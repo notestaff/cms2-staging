@@ -1,6 +1,6 @@
 version 1.0
 
-import "./structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220311-1537-refactor-avoid-glob--33287c4a9ef4410e429498fd4b4ab26d46c734cf/structs.wdl"
 
 # * task compute_one_pop_cms2_components
 task compute_one_pop_cms2_components {
@@ -12,8 +12,8 @@ task compute_one_pop_cms2_components {
     Pop sel_pop
     ComponentComputationParams component_computation_params
   }
-  File script = "./compute_cms2_components.py"
-  File misc_utils = "./misc_utils.py"  # !UnusedDeclaration
+  File script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220311-1537-refactor-avoid-glob/33287c4a9ef4410e429498fd4b4ab26d46c734cf/compute_cms2_components.py"
+  File misc_utils = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220311-1537-refactor-avoid-glob/33287c4a9ef4410e429498fd4b4ab26d46c734cf/misc_utils.py"  # !UnusedDeclaration
 
   command <<<
     set -ex -o pipefail
@@ -69,8 +69,8 @@ task compute_two_pop_cms2_components {
     Pop alt_pop
   }
 
-  File script = "./compute_cms2_components.py"
-  File misc_utils = "./misc_utils.py"  # !UnusedDeclaration
+  File script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220311-1537-refactor-avoid-glob/33287c4a9ef4410e429498fd4b4ab26d46c734cf/compute_cms2_components.py"
+  File misc_utils = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220311-1537-refactor-avoid-glob/33287c4a9ef4410e429498fd4b4ab26d46c734cf/misc_utils.py"  # !UnusedDeclaration
 
 # ** command
   command <<<
@@ -228,7 +228,7 @@ task normalize_and_collate_block {
   input {
     NormalizeAndCollateBlockInput inp
   }
-  File normalize_and_collate_script = "./norm_and_collate_block.py"
+  File normalize_and_collate_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220311-1537-refactor-avoid-glob/33287c4a9ef4410e429498fd4b4ab26d46c734cf/norm_and_collate_block.py"
   command <<<
     set -ex -o pipefail
 
@@ -262,7 +262,7 @@ task collate_stats_and_metadata_for_sel_sims_block {
   input {
     collate_stats_and_metadata_for_all_sel_sims_input inp
   }
-  File collate_stats_and_metadata_for_sel_sims_block_script = "./collate_stats_and_metadata_for_sel_sims_block.py"
+  File collate_stats_and_metadata_for_sel_sims_block_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220311-1537-refactor-avoid-glob/33287c4a9ef4410e429498fd4b4ab26d46c734cf/collate_stats_and_metadata_for_sel_sims_block.py"
   Int max_hapset_id_len = 256
   String hapsets_component_stats_h5_fname = inp.out_fnames_prefix + ".all_component_stats.h5"
   String hapsets_metadata_tsv_gz_fname = inp.out_fnames_prefix + ".hapsets_metadata.tsv.gz"
@@ -329,7 +329,7 @@ task construct_pops_info_for_1KG {
     File superpop_to_representative_pop_json = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/resources/superpop-to-representative-pop.json"
     File empirical_regions_bed
   }
-  File construct_pops_info_for_1KG_script = "./construct_pops_info_for_1KG.py"
+  File construct_pops_info_for_1KG_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220311-1537-refactor-avoid-glob/33287c4a9ef4410e429498fd4b4ab26d46c734cf/construct_pops_info_for_1KG.py"
   String pops_info_fname = "pops_info.1KG.json"
   command <<<
     set -ex -o pipefail
@@ -375,7 +375,7 @@ task fetch_empirical_hapsets_from_1KG {
     File genetic_maps_tar_gz = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/genetic_maps/hg19_maps.tar.gz"
     File superpop_to_representative_pop_json = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/resources/superpop-to-representative-pop.json"
   }
-  File fetch_empirical_hapsets_script = "./fetch_empirical_hapsets.py"
+  File fetch_empirical_hapsets_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220311-1537-refactor-avoid-glob/33287c4a9ef4410e429498fd4b4ab26d46c734cf/fetch_empirical_hapsets.py"
 
   command <<<
     set -ex -o pipefail
@@ -418,7 +418,7 @@ task call_neutral_region_explorer {
     NeutralRegionExplorerParams nre_params
     String out_fnames_prefix = "nre"
   }
-  File fetch_neutral_regions_nre_script = "./fetch_neutral_regions_nre.py"
+  File fetch_neutral_regions_nre_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220311-1537-refactor-avoid-glob/33287c4a9ef4410e429498fd4b4ab26d46c734cf/fetch_neutral_regions_nre.py"
   String neutral_regions_tsv_fname = out_fnames_prefix + ".neutral_regions.tsv"
   String neutral_regions_bed_fname = out_fnames_prefix + ".neutral_regions.bed"
   String nre_submitted_form_html_fname = out_fnames_prefix + ".submitted_form.html"
@@ -532,7 +532,7 @@ task compute_intervals_stats {
     File? metadata_json
     String intervals_report_html_fname = basename(intervals_files[0]) + ".stats.html"
   }
-  File compute_intervals_stats_script = "./compute_intervals_stats.py"
+  File compute_intervals_stats_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220311-1537-refactor-avoid-glob/33287c4a9ef4410e429498fd4b4ab26d46c734cf/compute_intervals_stats.py"
 
   command <<<
     set -ex -o pipefail
@@ -570,7 +570,7 @@ task construct_neutral_regions_list {
     GenomicFeaturesForFindingEmpiricalNeutralRegions genomic_features_for_finding_empirical_neutral_regions
     String neutral_regions_bed_fname = "neutral_regions.bed"
   }
-  File construct_neutral_regions_list_script = "./construct_neutral_regions_list.py"
+  File construct_neutral_regions_list_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220311-1537-refactor-avoid-glob/33287c4a9ef4410e429498fd4b4ab26d46c734cf/construct_neutral_regions_list.py"
 
   File empirical_neutral_regions_params_json = write_json(empirical_neutral_regions_params)
 
