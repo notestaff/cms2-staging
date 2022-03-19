@@ -1,7 +1,7 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220311-1537-refactor-avoid-glob--0cf8fbe421e1b5e653bb9c3a2c5d6abd28979eaa/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220311-1537-refactor-avoid-glob--0cf8fbe421e1b5e653bb9c3a2c5d6abd28979eaa/tasks.wdl"
 
 workflow construct_empirical_neutral_regions {
   input {
