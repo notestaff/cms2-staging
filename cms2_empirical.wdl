@@ -1,9 +1,9 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
-import "./fetch_empirical_hapsets.wdl"
-import "./compute_cms2_components.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220311-1537-refactor-avoid-glob--c6808d6635d0b5f6a1b3200dd4162d7359cb8667/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220311-1537-refactor-avoid-glob--c6808d6635d0b5f6a1b3200dd4162d7359cb8667/tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220311-1537-refactor-avoid-glob--c6808d6635d0b5f6a1b3200dd4162d7359cb8667/fetch_empirical_hapsets.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220311-1537-refactor-avoid-glob--c6808d6635d0b5f6a1b3200dd4162d7359cb8667/compute_cms2_components.wdl"
 
 workflow cms2_empirical {
   input {

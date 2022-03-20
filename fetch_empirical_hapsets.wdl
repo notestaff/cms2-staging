@@ -1,8 +1,8 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
-import "./wdl_assert.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220311-1537-refactor-avoid-glob--c6808d6635d0b5f6a1b3200dd4162d7359cb8667/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220311-1537-refactor-avoid-glob--c6808d6635d0b5f6a1b3200dd4162d7359cb8667/tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220311-1537-refactor-avoid-glob--c6808d6635d0b5f6a1b3200dd4162d7359cb8667/wdl_assert.wdl"
 
 workflow fetch_empirical_hapsets_wf {
   meta {
