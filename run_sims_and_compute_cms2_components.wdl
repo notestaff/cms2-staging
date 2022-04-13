@@ -68,10 +68,10 @@ version 1.0
 # Computation of CMS2 component scores
 #
 
-import "./run_sims.wdl"
-import "./tasks.wdl"
-import "./compute_normalization_stats.wdl"
-import "./component_stats_for_sel_sims.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-master--90e47f274123721080a9806430ee0dd66cb8fc4c/run_sims.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-master--90e47f274123721080a9806430ee0dd66cb8fc4c/tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-master--90e47f274123721080a9806430ee0dd66cb8fc4c/compute_normalization_stats.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-master--90e47f274123721080a9806430ee0dd66cb8fc4c/component_stats_for_sel_sims.wdl"
 
 # * workflow run_sims_and_compute_cms2_components
 workflow run_sims_and_compute_cms2_components_wf {
