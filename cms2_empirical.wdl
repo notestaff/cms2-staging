@@ -1,9 +1,9 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
-import "./fetch_empirical_hapsets.wdl"
-import "./compute_cms2_components.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220413-1556-replace-nre--267016d0b69d62b7fcf0393ee074a2ce69084c1c/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220413-1556-replace-nre--267016d0b69d62b7fcf0393ee074a2ce69084c1c/tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220413-1556-replace-nre--267016d0b69d62b7fcf0393ee074a2ce69084c1c/fetch_empirical_hapsets.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220413-1556-replace-nre--267016d0b69d62b7fcf0393ee074a2ce69084c1c/compute_cms2_components.wdl"
 
 workflow cms2_empirical {
   input {
