@@ -1,7 +1,7 @@
 {
     "cms2_empirical.empirical_hapsets_def" : { 
 	"empirical_hapsets_bundle_id": "g1k_isafe_test",
-	"empirical_neutral_regions_bed": "./neut2.test.bed",
-	"empirical_selection_regions_bed": "./sel_lct.test.bed"
+	"empirical_neutral_regions_bed": "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220413-1556-replace-nre/9bdc06d8772de46520b813f6469cf4234d2c9912/neut2.test.bed",
+	"empirical_selection_regions_bed": "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220413-1556-replace-nre/9bdc06d8772de46520b813f6469cf4234d2c9912/sel_lct.test.bed"
     }
 }
