@@ -1,6 +1,6 @@
 version 1.0
 
-import "./structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220413-1556-replace-nre--2c5b8bd081f46d2183c002b76e132fb4c10997d0/structs.wdl"
 
 # * task compute_one_pop_cms2_components
 task compute_one_pop_cms2_components {
@@ -12,8 +12,8 @@ task compute_one_pop_cms2_components {
     Pop sel_pop
     ComponentComputationParams component_computation_params
   }
-  File script = "./compute_cms2_components.py"
-  File misc_utils = "./misc_utils.py"  # !UnusedDeclaration
+  File script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220413-1556-replace-nre/2c5b8bd081f46d2183c002b76e132fb4c10997d0/compute_cms2_components.py"
+  File misc_utils = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220413-1556-replace-nre/2c5b8bd081f46d2183c002b76e132fb4c10997d0/misc_utils.py"  # !UnusedDeclaration
 
   command <<<
     set -ex -o pipefail
@@ -48,7 +48,7 @@ task compute_one_pop_cms2_components {
 
   runtime {
     #docker: "quay.io/ilya_broad/cms@sha256:fc4825edda550ef203c917adb0b149cbcc82f0eeae34b516a02afaaab0eceac6"  # selscan=1.3.0a09
-    docker: "quay.io/ilya_broad/cms:cms2-docker-component-stats-4fee1fcacb4f5a48cf188b753fed156e1bf3b9b2"  # selscan=1.3.0a09
+    docker: "quay.io/ilya_broad/cms:cms2-docker-component-stats-db97ffb09dc827757499a5f4235bbe34296efdec"  # selscan=1.3.0a09
     preemptible: 3
     memory: "16 GB"
     cpu: 1
@@ -69,8 +69,8 @@ task compute_two_pop_cms2_components {
     Pop alt_pop
   }
 
-  File script = "./compute_cms2_components.py"
-  File misc_utils = "./misc_utils.py"  # !UnusedDeclaration
+  File script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220413-1556-replace-nre/2c5b8bd081f46d2183c002b76e132fb4c10997d0/compute_cms2_components.py"
+  File misc_utils = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220413-1556-replace-nre/2c5b8bd081f46d2183c002b76e132fb4c10997d0/misc_utils.py"  # !UnusedDeclaration
 
 # ** command
   command <<<
@@ -100,7 +100,7 @@ task compute_two_pop_cms2_components {
 # ** runtime
   runtime {
     # docker: "quay.io/ilya_broad/cms@sha256:fc4825edda550ef203c917adb0b149cbcc82f0eeae34b516a02afaaab0eceac6"  # selscan=1.3.0a09
-    docker: "quay.io/ilya_broad/cms:cms2-docker-component-stats-4fee1fcacb4f5a48cf188b753fed156e1bf3b9b2"  # selscan=1.3.0a09
+    docker: "quay.io/ilya_broad/cms:cms2-docker-component-stats-db97ffb09dc827757499a5f4235bbe34296efdec"  # selscan=1.3.0a09
     preemptible: 3
     memory: "8 GB"
     cpu: 8
@@ -155,7 +155,7 @@ task compute_one_pop_bin_stats_for_normalization {
   }
 
   runtime {
-    docker: "quay.io/ilya_broad/cms:cms2-docker-component-stats-4fee1fcacb4f5a48cf188b753fed156e1bf3b9b2"  # selscan=1.3.0a09
+    docker: "quay.io/ilya_broad/cms:cms2-docker-component-stats-db97ffb09dc827757499a5f4235bbe34296efdec"  # selscan=1.3.0a09
     #docker: "quay.io/ilya_broad/cms@sha256:fc4825edda550ef203c917adb0b149cbcc82f0eeae34b516a02afaaab0eceac6"  # selscan=1.3.0a09
     preemptible: 2
     memory: "8 GB"
@@ -211,7 +211,7 @@ task compute_two_pop_bin_stats_for_normalization {
 
   runtime {
     #docker: "quay.io/ilya_broad/cms@sha256:fc4825edda550ef203c917adb0b149cbcc82f0eeae34b516a02afaaab0eceac6"  # selscan=1.3.0a09
-    docker: "quay.io/ilya_broad/cms:cms2-docker-component-stats-4fee1fcacb4f5a48cf188b753fed156e1bf3b9b2"  # selscan=1.3.0a09
+    docker: "quay.io/ilya_broad/cms:cms2-docker-component-stats-db97ffb09dc827757499a5f4235bbe34296efdec"  # selscan=1.3.0a09
     preemptible: 2
     memory: "8 GB"
     cpu: 1
@@ -228,7 +228,7 @@ task normalize_and_collate_block {
   input {
     NormalizeAndCollateBlockInput inp
   }
-  File normalize_and_collate_script = "./norm_and_collate_block.py"
+  File normalize_and_collate_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220413-1556-replace-nre/2c5b8bd081f46d2183c002b76e132fb4c10997d0/norm_and_collate_block.py"
   command <<<
     set -ex -o pipefail
 
@@ -240,7 +240,7 @@ task normalize_and_collate_block {
     Pop sel_pop_used = inp.sel_pop
   }
   runtime {
-    docker: "quay.io/ilya_broad/cms:cms2-docker-component-stats-4fee1fcacb4f5a48cf188b753fed156e1bf3b9b2"  # selscan=1.3.0a09
+    docker: "quay.io/ilya_broad/cms:cms2-docker-component-stats-db97ffb09dc827757499a5f4235bbe34296efdec"  # selscan=1.3.0a09
     #docker: "quay.io/ilya_broad/cms@sha256:fc4825edda550ef203c917adb0b149cbcc82f0eeae34b516a02afaaab0eceac6"  # selscan=1.3.0a09
     memory: "1 GB"
     cpu: 1
@@ -262,7 +262,7 @@ task collate_stats_and_metadata_for_sel_sims_block {
   input {
     collate_stats_and_metadata_for_all_sel_sims_input inp
   }
-  File collate_stats_and_metadata_for_sel_sims_block_script = "./collate_stats_and_metadata_for_sel_sims_block.py"
+  File collate_stats_and_metadata_for_sel_sims_block_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220413-1556-replace-nre/2c5b8bd081f46d2183c002b76e132fb4c10997d0/collate_stats_and_metadata_for_sel_sims_block.py"
   Int max_hapset_id_len = 256
   String hapsets_component_stats_h5_fname = inp.out_fnames_prefix + ".all_component_stats.h5"
   String hapsets_metadata_tsv_gz_fname = inp.out_fnames_prefix + ".hapsets_metadata.tsv.gz"
@@ -329,7 +329,7 @@ task construct_pops_info_for_1KG {
     File superpop_to_representative_pop_json = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/resources/superpop-to-representative-pop.json"
     File empirical_regions_bed
   }
-  File construct_pops_info_for_1KG_script = "./construct_pops_info_for_1KG.py"
+  File construct_pops_info_for_1KG_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220413-1556-replace-nre/2c5b8bd081f46d2183c002b76e132fb4c10997d0/construct_pops_info_for_1KG.py"
   String pops_info_fname = "pops_info.1KG.json"
   command <<<
     set -ex -o pipefail
@@ -375,7 +375,7 @@ task fetch_empirical_hapsets_from_1KG {
     File genetic_maps_tar_gz = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/genetic_maps/hg19_maps.tar.gz"
     File superpop_to_representative_pop_json = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/resources/superpop-to-representative-pop.json"
   }
-  File fetch_empirical_hapsets_script = "./fetch_empirical_hapsets.py"
+  File fetch_empirical_hapsets_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220413-1556-replace-nre/2c5b8bd081f46d2183c002b76e132fb4c10997d0/fetch_empirical_hapsets.py"
 
   command <<<
     set -ex -o pipefail
@@ -418,7 +418,7 @@ task call_neutral_region_explorer {
     NeutralRegionExplorerParams nre_params
     String out_fnames_prefix = "nre"
   }
-  File fetch_neutral_regions_nre_script = "./fetch_neutral_regions_nre.py"
+  File fetch_neutral_regions_nre_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220413-1556-replace-nre/2c5b8bd081f46d2183c002b76e132fb4c10997d0/fetch_neutral_regions_nre.py"
   String neutral_regions_tsv_fname = out_fnames_prefix + ".neutral_regions.tsv"
   String neutral_regions_bed_fname = out_fnames_prefix + ".neutral_regions.bed"
   String nre_submitted_form_html_fname = out_fnames_prefix + ".submitted_form.html"
@@ -532,7 +532,7 @@ task compute_intervals_stats {
     File? metadata_json
     String intervals_report_html_fname = basename(intervals_files[0]) + ".stats.html"
   }
-  File compute_intervals_stats_script = "./compute_intervals_stats.py"
+  File compute_intervals_stats_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220413-1556-replace-nre/2c5b8bd081f46d2183c002b76e132fb4c10997d0/compute_intervals_stats.py"
 
   command <<<
     set -ex -o pipefail
@@ -546,7 +546,7 @@ task compute_intervals_stats {
     File intervals_report_html = intervals_report_html_fname
   }
   runtime {
-    docker: "quay.io/ilya_broad/cms:common-tools-69afd7403a40ccf2c1578be9f67d6e09b1143f22"
+    docker: "quay.io/ilya_broad/cms:common-tools-9270cd5cc8fb9126e466d8ea6e1e7719e1aab810"
     memory: "4 GB"
     cpu: 1
     disks: "local-disk 32 HDD"
@@ -570,7 +570,7 @@ task construct_neutral_regions_list {
     GenomicFeaturesForFindingEmpiricalNeutralRegions genomic_features_for_finding_empirical_neutral_regions
     String neutral_regions_bed_fname = "neutral_regions.bed"
   }
-  File construct_neutral_regions_list_script = "./construct_neutral_regions_list.py"
+  File construct_neutral_regions_list_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220413-1556-replace-nre/2c5b8bd081f46d2183c002b76e132fb4c10997d0/construct_neutral_regions_list.py"
 
   File empirical_neutral_regions_params_json = write_json(empirical_neutral_regions_params)
 
@@ -591,7 +591,7 @@ task construct_neutral_regions_list {
     File empirical_neutral_regions_params_used_json = empirical_neutral_regions_params_json
   }
   runtime {
-    docker: "quay.io/ilya_broad/cms:common-tools-69afd7403a40ccf2c1578be9f67d6e09b1143f22"
+    docker: "quay.io/ilya_broad/cms:common-tools-9270cd5cc8fb9126e466d8ea6e1e7719e1aab810"
     memory: "4 GB"
     cpu: 1
     disks: "local-disk 32 HDD"
