@@ -1,7 +1,7 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220510-1344-update-miniconda--87613891dd52d10581aa08ceca065ce01de25b64/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220510-1344-update-miniconda--87613891dd52d10581aa08ceca065ce01de25b64/tasks.wdl"
 
 workflow cms2_test_fetch {
   input {
