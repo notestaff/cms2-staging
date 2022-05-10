@@ -1,6 +1,6 @@
 version 1.0
 
-import "./tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220510-1344-update-miniconda--24d83450dc3356ebb4be8d866bd68ff924ab682c/tasks.wdl"
 
 workflow component_stats_for_sel_sims_wf {
   input {
