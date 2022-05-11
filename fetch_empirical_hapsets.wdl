@@ -1,8 +1,8 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
-import "./wdl_assert.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220510-1344-update-miniconda--6ccc06844982a440a18ae087a2c7d05c8db5097d/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220510-1344-update-miniconda--6ccc06844982a440a18ae087a2c7d05c8db5097d/tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220510-1344-update-miniconda--6ccc06844982a440a18ae087a2c7d05c8db5097d/wdl_assert.wdl"
 
 workflow fetch_empirical_hapsets_wf {
   meta {
