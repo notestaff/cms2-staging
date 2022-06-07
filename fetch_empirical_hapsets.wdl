@@ -1,8 +1,8 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
-import "./wdl_assert.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220607-1621-try-neutralome--0da5bdc8cf9ec80eb15e379648869fc195e11a39/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220607-1621-try-neutralome--0da5bdc8cf9ec80eb15e379648869fc195e11a39/tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220607-1621-try-neutralome--0da5bdc8cf9ec80eb15e379648869fc195e11a39/wdl_assert.wdl"
 
 workflow fetch_empirical_hapsets_wf {
   meta {
