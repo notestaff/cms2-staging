@@ -1,7 +1,7 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220607-1621-try-neutralome--044eee8568ca34baa879ffe344e9099baed93950/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220607-1621-try-neutralome--044eee8568ca34baa879ffe344e9099baed93950/tasks.wdl"
 
 workflow cms2_test_fetch {
   input {
