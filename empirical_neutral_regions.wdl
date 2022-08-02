@@ -1,7 +1,7 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220607-1621-try-neutralome--e2a1eceec0d01a7d9f985b0a472cb26a57358c6b/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220607-1621-try-neutralome--e2a1eceec0d01a7d9f985b0a472cb26a57358c6b/tasks.wdl"
 
 workflow construct_empirical_neutral_regions {
   input {
