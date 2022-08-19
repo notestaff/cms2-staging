@@ -1,8 +1,8 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
-import "./wdl_assert.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-srong-2022-08-06-01--9fd934a0f62610783a4515dad837e07038d0308c/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-srong-2022-08-06-01--9fd934a0f62610783a4515dad837e07038d0308c/tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-srong-2022-08-06-01--9fd934a0f62610783a4515dad837e07038d0308c/wdl_assert.wdl"
 
 workflow fetch_empirical_hapsets_wf {
   meta {
