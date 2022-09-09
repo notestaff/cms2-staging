@@ -1,7 +1,7 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-srong-2022-08-06-01--f12d4a9ec325f05c9707dea78977fe7ca49bc252/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-srong-2022-08-06-01--f12d4a9ec325f05c9707dea78977fe7ca49bc252/tasks.wdl"
 
 workflow construct_empirical_neutral_regions {
   input {
