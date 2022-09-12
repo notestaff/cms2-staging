@@ -3,7 +3,7 @@
     "cms2_main.nreps": 4,
     "cms2_main.numRepsPerBlock": 2,
     "cms2_main.paramFile_demographic_model": "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/defdef15_hard_sel1_common.citest.2Mb.par",
-    "cms2_main.paramFile_neutral": "./test.neutral.cosiParams",
-    "cms2_main.paramFiles_selection": ["./sel1_origin1.par", "./sel3_origin2.par"],
-    "cms2_main.recombFile": "./test_recom.recom"
+    "cms2_main.paramFile_neutral": "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/srong-2022-08-06-01/af2aa7e99309bc9fdde9d0557ca4b87759d1b9b3/test.neutral.cosiParams",
+    "cms2_main.paramFiles_selection": ["gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/srong-2022-08-06-01/af2aa7e99309bc9fdde9d0557ca4b87759d1b9b3/sel1_origin1.par", "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/srong-2022-08-06-01/af2aa7e99309bc9fdde9d0557ca4b87759d1b9b3/sel3_origin2.par"],
+    "cms2_main.recombFile": "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/srong-2022-08-06-01/af2aa7e99309bc9fdde9d0557ca4b87759d1b9b3/test_recom.recom"
 }
