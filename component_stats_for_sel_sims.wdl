@@ -1,6 +1,6 @@
 version 1.0
 
-import "./tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-srong-2022-08-06-01--c073ea7b88d146eb90491f67f745ca8309e58590/tasks.wdl"
 
 workflow component_stats_for_sel_sims_wf {
   input {
