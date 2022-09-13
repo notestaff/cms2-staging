@@ -1,7 +1,7 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-srong-2022-08-06-01--4d1f8fe7752cd889a9eab36c586760618eec45a0/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-srong-2022-08-06-01--4d1f8fe7752cd889a9eab36c586760618eec45a0/tasks.wdl"
 
 workflow cms2_test_fetch {
   input {
