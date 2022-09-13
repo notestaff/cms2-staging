@@ -3,8 +3,8 @@
     "cms2_main.nreps": 8,
     "cms2_main.numRepsPerBlock": 8,
     "cms2_main.hapset_block_size": 8,
-    "cms2_main.paramFile_demographic_model": "./troubleshoot_minimal_1_orig_model_three_pop_split_only.par",
-    "cms2_main.paramFile_neutral": "./test.neutral.cosiParams",
-    "cms2_main.paramFiles_selection": ["./troubleshoot_sel_origin.par"],
-    "cms2_main.recombFile": "./test_recom.recom"
+    "cms2_main.paramFile_demographic_model": "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/srong-2022-08-06-01/563853a0a0be816dc3a2a465bcf4c1ae002b6979/troubleshoot_minimal_1_orig_model_three_pop_split_only.par",
+    "cms2_main.paramFile_neutral": "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/srong-2022-08-06-01/563853a0a0be816dc3a2a465bcf4c1ae002b6979/test.neutral.cosiParams",
+    "cms2_main.paramFiles_selection": ["gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/srong-2022-08-06-01/563853a0a0be816dc3a2a465bcf4c1ae002b6979/troubleshoot_sel_origin.par"],
+    "cms2_main.recombFile": "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/srong-2022-08-06-01/563853a0a0be816dc3a2a465bcf4c1ae002b6979/test_recom.recom"
 }
