@@ -1,6 +1,6 @@
 version 1.0
 
-import "./tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220819-1337-neutralome-with-margins--170bd535a639e89adc02fee14d35d62f6bbc1dde/tasks.wdl"
 
 workflow component_stats_for_sel_sims_wf {
   input {
