@@ -1,7 +1,7 @@
 version 1.0
 
-import "./structs.wdl"
-import "./run_sims_and_compute_cms2_components.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220819-1337-neutralome-with-margins--c20383a73a042b66800885b464dedcc96b69bc35/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220819-1337-neutralome-with-margins--c20383a73a042b66800885b464dedcc96b69bc35/run_sims_and_compute_cms2_components.wdl"
 
 # * workflow cms2_main_emp
 workflow cms2_main_emp {
