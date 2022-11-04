@@ -1,9 +1,9 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
-import "./fetch_empirical_hapsets.wdl"
-import "./compute_cms2_components.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220819-1337-neutralome-with-margins--f0525ae0034cb756284eac3a68456e7d4b728718/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220819-1337-neutralome-with-margins--f0525ae0034cb756284eac3a68456e7d4b728718/tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220819-1337-neutralome-with-margins--f0525ae0034cb756284eac3a68456e7d4b728718/fetch_empirical_hapsets.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220819-1337-neutralome-with-margins--f0525ae0034cb756284eac3a68456e7d4b728718/compute_cms2_components.wdl"
 
 workflow cms2_empirical {
   input {
