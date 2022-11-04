@@ -1,6 +1,6 @@
 version 1.0
 
-import "./structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220819-1337-neutralome-with-margins--4b91648d78c96678873fed4e8381258971e13c38/structs.wdl"
 
 # * task compute_one_pop_cms2_components
 task compute_one_pop_cms2_components {
@@ -13,8 +13,8 @@ task compute_one_pop_cms2_components {
     ComponentComputationParams component_computation_params
     Array[String] components = ["ihs", "nsl", "ihh12", "delihh", "derFreq", "iSAFE"]
   }
-  File script = "./compute_cms2_components.py"
-  File misc_utils = "./misc_utils.py"  # !UnusedDeclaration
+  File script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220819-1337-neutralome-with-margins/4b91648d78c96678873fed4e8381258971e13c38/compute_cms2_components.py"
+  File misc_utils = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220819-1337-neutralome-with-margins/4b91648d78c96678873fed4e8381258971e13c38/misc_utils.py"  # !UnusedDeclaration
 
   command <<<
     set -ex -o pipefail
@@ -70,8 +70,8 @@ task compute_two_pop_cms2_components {
     Pop alt_pop
   }
 
-  File script = "./compute_cms2_components.py"
-  File misc_utils = "./misc_utils.py"  # !UnusedDeclaration
+  File script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220819-1337-neutralome-with-margins/4b91648d78c96678873fed4e8381258971e13c38/compute_cms2_components.py"
+  File misc_utils = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220819-1337-neutralome-with-margins/4b91648d78c96678873fed4e8381258971e13c38/misc_utils.py"  # !UnusedDeclaration
 
 # ** command
   command <<<
@@ -131,7 +131,7 @@ task compute_one_pop_bin_stats_for_normalization {
     Int trim_margin_bp = 0
   }
   Int n_bins_ihh12 = 1
-  File trim_margins_script = "./trim_margins.py"
+  File trim_margins_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220819-1337-neutralome-with-margins/4b91648d78c96678873fed4e8381258971e13c38/trim_margins.py"
 
   command <<<
     set -ex -o pipefail
@@ -189,7 +189,7 @@ task compute_two_pop_bin_stats_for_normalization {
     Int trim_margin_bp = 0
   }
   Int n_bins_xpehh = 1
-  File trim_margins_script = "./trim_margins.py"
+  File trim_margins_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220819-1337-neutralome-with-margins/4b91648d78c96678873fed4e8381258971e13c38/trim_margins.py"
 
   String norm_bins_xpehh_fname = "${out_fnames_prefix}__selpop_${sel_pop.pop_id}__altpop_${alt_pop.pop_id}.norm_bins_xpehh.dat"
   String norm_bins_xpehh_log_fname = "${out_fnames_prefix}__selpop_${sel_pop.pop_id}__altpop_${alt_pop.pop_id}.norm_bins_xpehh.dat"
@@ -243,7 +243,7 @@ task normalize_and_collate_block {
   input {
     NormalizeAndCollateBlockInput inp
   }
-  File normalize_and_collate_script = "./norm_and_collate_block.py"
+  File normalize_and_collate_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220819-1337-neutralome-with-margins/4b91648d78c96678873fed4e8381258971e13c38/norm_and_collate_block.py"
   command <<<
     set -ex -o pipefail
 
@@ -277,7 +277,7 @@ task collate_stats_and_metadata_for_sel_sims_block {
   input {
     collate_stats_and_metadata_for_all_sel_sims_input inp
   }
-  File collate_stats_and_metadata_for_sel_sims_block_script = "./collate_stats_and_metadata_for_sel_sims_block.py"
+  File collate_stats_and_metadata_for_sel_sims_block_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220819-1337-neutralome-with-margins/4b91648d78c96678873fed4e8381258971e13c38/collate_stats_and_metadata_for_sel_sims_block.py"
   Int max_hapset_id_len = 256
   String hapsets_component_stats_h5_fname = inp.out_fnames_prefix + ".all_component_stats.h5"
   String hapsets_metadata_tsv_gz_fname = inp.out_fnames_prefix + ".hapsets_metadata.tsv.gz"
@@ -341,10 +341,10 @@ task construct_pops_info_for_1KG {
     pops_info: "(PopsInfo) a PopsInfo struct giving info for 1KG pops"
   }
   input {
-    File superpop_to_representative_pop_json = "./resources/superpop-to-representative-pop.json"
+    File superpop_to_representative_pop_json = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220819-1337-neutralome-with-margins/4b91648d78c96678873fed4e8381258971e13c38/resources/superpop-to-representative-pop.json"
     File empirical_regions_bed
   }
-  File construct_pops_info_for_1KG_script = "./construct_pops_info_for_1KG.py"
+  File construct_pops_info_for_1KG_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220819-1337-neutralome-with-margins/4b91648d78c96678873fed4e8381258971e13c38/construct_pops_info_for_1KG.py"
   String pops_info_fname = "pops_info.1KG.json"
   command <<<
     set -ex -o pipefail
@@ -462,13 +462,13 @@ task fetch_empirical_hapsets_from_1KG {
     File empirical_regions_bed
     String out_fnames_prefix
     File genetic_maps_tar_gz
-    File superpop_to_representative_pop_json = "./resources/superpop-to-representative-pop.json"
+    File superpop_to_representative_pop_json = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220819-1337-neutralome-with-margins/4b91648d78c96678873fed4e8381258971e13c38/resources/superpop-to-representative-pop.json"
     ChromVcfs chrom_vcfs
     File pedigree_data_ped
     File related_individuals_txt
     File pops_data_tsv
   }
-  File fetch_empirical_hapsets_script = "./fetch_empirical_hapsets.py"
+  File fetch_empirical_hapsets_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220819-1337-neutralome-with-margins/4b91648d78c96678873fed4e8381258971e13c38/fetch_empirical_hapsets.py"
   String stats_cumul_json_fname = out_fnames_prefix + ".stats_cumul.json"
 
   command <<<
@@ -519,7 +519,7 @@ task call_neutral_region_explorer {
     NeutralRegionExplorerParams nre_params
     String out_fnames_prefix = "nre"
   }
-  File fetch_neutral_regions_nre_script = "./fetch_neutral_regions_nre.py"
+  File fetch_neutral_regions_nre_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220819-1337-neutralome-with-margins/4b91648d78c96678873fed4e8381258971e13c38/fetch_neutral_regions_nre.py"
   String neutral_regions_tsv_fname = out_fnames_prefix + ".neutral_regions.tsv"
   String neutral_regions_bed_fname = out_fnames_prefix + ".neutral_regions.bed"
   String nre_submitted_form_html_fname = out_fnames_prefix + ".submitted_form.html"
@@ -685,7 +685,7 @@ task compute_intervals_stats {
     File? metadata_json
     String intervals_report_html_fname = basename(intervals_files[0]) + ".stats.html"
   }
-  File compute_intervals_stats_script = "./compute_intervals_stats.py"
+  File compute_intervals_stats_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220819-1337-neutralome-with-margins/4b91648d78c96678873fed4e8381258971e13c38/compute_intervals_stats.py"
 
   command <<<
     set -ex -o pipefail
@@ -722,7 +722,7 @@ task get_intervals_chroms {
     Array[File]+ intervals_files
     String intervals_chroms_fname = basename(intervals_files[0]) + ".chroms.txt"
   }
-  File get_intervals_chroms_script = "./get_intervals_chroms.py"
+  File get_intervals_chroms_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220819-1337-neutralome-with-margins/4b91648d78c96678873fed4e8381258971e13c38/get_intervals_chroms.py"
 
   command <<<
     set -ex -o pipefail
@@ -826,7 +826,7 @@ task construct_neutral_regions_list {
     GenomicFeaturesForFindingEmpiricalNeutralRegions genomic_features_for_finding_empirical_neutral_regions
     String neutral_regions_bed_fname = "neutral_regions.bed"
   }
-  File construct_neutral_regions_list_script = "./construct_neutral_regions_list.py"
+  File construct_neutral_regions_list_script = "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220819-1337-neutralome-with-margins/4b91648d78c96678873fed4e8381258971e13c38/construct_neutral_regions_list.py"
 
   File empirical_neutral_regions_params_json = write_json(empirical_neutral_regions_params)
 
