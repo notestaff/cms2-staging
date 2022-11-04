@@ -1,10 +1,10 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
-import "./wdl_assert.wdl"
-import "./fetch_g1k_vcfs.wdl"
-import "./wdl_slice_array_of_file.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220819-1337-neutralome-with-margins--8a4c33e10d091ab32ce001c4555ae8a06b734230/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220819-1337-neutralome-with-margins--8a4c33e10d091ab32ce001c4555ae8a06b734230/tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220819-1337-neutralome-with-margins--8a4c33e10d091ab32ce001c4555ae8a06b734230/wdl_assert.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220819-1337-neutralome-with-margins--8a4c33e10d091ab32ce001c4555ae8a06b734230/fetch_g1k_vcfs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220819-1337-neutralome-with-margins--8a4c33e10d091ab32ce001c4555ae8a06b734230/wdl_slice_array_of_file.wdl"
 
 workflow fetch_empirical_hapsets_wf {
   meta {
