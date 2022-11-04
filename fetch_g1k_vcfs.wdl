@@ -1,8 +1,8 @@
 version 1.0
 
-import "./structs.wdl"
-import "./tasks.wdl"
-import "./wdl_assert.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220819-1337-neutralome-with-margins--fc0cc71a7aace6e686f4e0f3d6eadf26b2d6ac93/structs.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220819-1337-neutralome-with-margins--fc0cc71a7aace6e686f4e0f3d6eadf26b2d6ac93/tasks.wdl"
+import "https://raw.githubusercontent.com/notestaff/cms2-staging/staging-is-220819-1337-neutralome-with-margins--fc0cc71a7aace6e686f4e0f3d6eadf26b2d6ac93/wdl_assert.wdl"
 
 workflow fetch_g1k_vcfs_wf {
   meta {
