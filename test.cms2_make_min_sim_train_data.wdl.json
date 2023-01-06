@@ -3,8 +3,8 @@
     "cms2_main.nreps": 8192,
     "cms2_main.numRepsPerBlock": 32,
     "cms2_main.hapset_block_size": 32,
-    "cms2_main.paramFile_demographic_model": "./defdef15_hard_sel1_common.par",
-    "cms2_main.paramFile_neutral": "./test.neutral.cosiParams",
-    "cms2_main.paramFiles_selection": ["./sel1_origin1.par"],
-    "cms2_main.recombFile": "./test_recom.recom"
+    "cms2_main.paramFile_demographic_model": "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220819-1337-neutralome-with-margins/a84ebf3f6d13bf29a698dda796433c6d2bf9a987/defdef15_hard_sel1_common.par",
+    "cms2_main.paramFile_neutral": "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220819-1337-neutralome-with-margins/a84ebf3f6d13bf29a698dda796433c6d2bf9a987/test.neutral.cosiParams",
+    "cms2_main.paramFiles_selection": ["gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220819-1337-neutralome-with-margins/a84ebf3f6d13bf29a698dda796433c6d2bf9a987/sel1_origin1.par"],
+    "cms2_main.recombFile": "gs://fc-21baddbc-5142-4983-a26e-7d85a72c830b/cms2-work/is-220819-1337-neutralome-with-margins/a84ebf3f6d13bf29a698dda796433c6d2bf9a987/test_recom.recom"
 }
